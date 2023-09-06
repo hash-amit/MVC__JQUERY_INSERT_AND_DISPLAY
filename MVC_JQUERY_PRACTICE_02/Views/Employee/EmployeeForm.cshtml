@@ -65,7 +65,7 @@
             type: 'post',
             data: {},
             success: function (data) {
-                data = JSON.parse(data);
+                data = JSON.parse(data); // JSON.parse is a built-in JavaScript function that parses a JSON-formatted string and converts it into a JavaScript object.
                 $("#Show_tbl").find("tr:gt(0)").remove(); // removing all the old rows just before filling the table
                 for (var i = 0; i < data.length; i++){
                     $("#Show_tbl").append('<tr> <td>' + data[i].EID + '</td> <td>' + data[i].NAME + '</td> <td>' + data[i].EMAIL + '</td> <td>' + data[i].MOBILE + '</td> </tr>');

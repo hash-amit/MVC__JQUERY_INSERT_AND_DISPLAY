@@ -41,7 +41,7 @@ namespace MVC_JQUERY_PRACTICE_02.Controllers
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             con.Close();
-            String data = JsonConvert.SerializeObject(dt);
+            String data = JsonConvert.SerializeObject(dt); // serializing a DataTable object dt into a JSON-formatted string
             return Json(data,JsonRequestBehavior.AllowGet);
         }
     }
